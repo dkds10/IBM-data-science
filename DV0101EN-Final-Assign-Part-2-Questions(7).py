@@ -62,7 +62,7 @@ app.layout = html.Div([
     html.Div(dcc.Dropdown(
             id='select-year',
             options=[{'label': i, 'value': i} for i in year_list],
-            value='Select-year',
+            value=None,
             placeholder='Select-year',
             style={'textAlign': 'center',
                     # 'color': '#503D36',
@@ -155,8 +155,8 @@ def update_output_container(report_type, input_year
 # TASK 2.6: Create and display graphs for Yearly Report Statistics
  # Yearly Statistic Report Plots
     # Check for Yearly Statistics.                             
-    elif (input_year and selected_statistics=='Yearly Statistics') :
-        yearly_data = data[data['Year'] == 1 ]
+    elif (input_year and report_type=='Yearly Statistics') :
+        yearly_data = data[data['Year'] == input_year ]
                               
 
                               
