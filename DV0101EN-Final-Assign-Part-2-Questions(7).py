@@ -156,7 +156,7 @@ def update_output_container(report_type, input_year
  # Yearly Statistic Report Plots
     # Check for Yearly Statistics.                             
     elif (input_year and selected_statistics=='Yearly Statistics') :
-        yearly_data = data[data['Year'] == input_year ]
+        yearly_data = data[data['Year'] == 1 ]
                               
 
                               
